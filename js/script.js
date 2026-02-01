@@ -1,4 +1,4 @@
-﻿const bookData = [
+const bookData = [
     {
         id: 0,
         title: "مقدمة الكتاب 📘",
@@ -172,7 +172,7 @@
                     <div class="interactive-demo" id="binary-demo">
                         <h4><i class="fas fa-calculator"></i> عداد ثنائي تفاعلي</h4>
                         <p>جرب تشعل وتطفي الخانات باش تشوف كيفاش كيتكون الرقم</p>
-                        <div class="binary-switches">
+                        <div class="binary-switches" style="direction: ltr;">
                             <div class="switch-container">
                                 <div class="switch" data-value="4">0</div>
                                 <span>4</span>
