@@ -1,0 +1,134 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- SEO Meta Tags -->
+    <title>كويز: واش فهمتي كيفاش كيخدم الكمبيوتر؟ | اختبار تفاعلي</title>
+    <meta name="description"
+        content="اختبر معلوماتك حول كيفية عمل الكمبيوتر. كويز تفاعلي شامل يغطي النظام الثنائي، الترانزيستورات، المعالج، الذاكرة والبرمجة.">
+    <meta name="keywords" content="كويز برمجة, اختبار الكمبيوتر, تعلم البرمجة, اختبار تفاعلي عربي">
+    <meta name="author" content="Book Computer Structured">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/quiz.css">
+</head>
+
+<body>
+    <!-- الترويسة -->
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <i class="fas fa-question-circle"></i>
+                <span>كويز: واش فهمتي كيفاش كيخدم الكمبيوتر؟</span>
+            </div>
+            <div class="subtitle">
+                جاوب على الأسئلة باش تشوف راسك واش شاد المفاهيم مزيان. فالاخر تقدر تشوف النتيجة وتصحح الأخطاء.
+            </div>
+            <div class="controls">
+                <button class="nav-btn" onclick="window.location.href='index.html'">
+                    <i class="fas fa-book"></i> رجع للكتاب
+                </button>
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="fas fa-moon"></i> وضع الليل
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- المحتوى الرئيسي -->
+    <div class="container">
+        <!-- إحصائيات الكويز -->
+        <div class="quiz-stats">
+            <div class="stat-item">
+                <div class="stat-value" id="totalQuestions">22</div>
+                <div class="stat-label">إجمالي الأسئلة</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value" id="answeredQuestions">0</div>
+                <div class="stat-label">تمت الإجابة</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value" id="correctAnswers">0</div>
+                <div class="stat-label">إجابات صحيحة</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value" id="scorePercentage">0%</div>
+                <div class="stat-label">النسبة المئوية</div>
+            </div>
+        </div>
+
+        <!-- ملخص النتائج -->
+        <div class="results-summary" id="resultsSummary">
+            <h2 class="results-title"><i class="fas fa-chart-line"></i> نتائج الكويز</h2>
+
+            <div class="score-circle">
+                <div class="score-percent" id="finalScore">0%</div>
+                <div class="score-label">درجتك</div>
+            </div>
+
+            <div class="results-details">
+                <div class="result-detail">
+                    <div class="result-value correct-answer" id="finalCorrect">0</div>
+                    <div class="result-label">إجابات صحيحة</div>
+                </div>
+                <div class="result-detail">
+                    <div class="result-value wrong-answer" id="finalWrong">0</div>
+                    <div class="result-label">إجابات خاطئة</div>
+                </div>
+                <div class="result-detail">
+                    <div class="result-value unanswered" id="finalUnanswered">22</div>
+                    <div class="result-label">لم تتم الإجابة</div>
+                </div>
+            </div>
+
+            <div class="result-message-box">
+                <p id="resultMessage">ابدأ بالإجابة على الأسئلة لترى نتيجتك!</p>
+            </div>
+        </div>
+
+        <!-- أسئلة الكويز -->
+        <div id="quizContent">
+            <!-- سيتم ملؤه بواسطة جافا سكريبت -->
+        </div>
+
+        <!-- أزرار التحكم -->
+        <div class="controls-bottom">
+            <button class="nav-btn check-answers-btn" onclick="checkAllAnswers()">
+                <i class="fas fa-check-circle"></i> تصحيح جميع الإجابات
+            </button>
+            <button class="nav-btn reset-quiz-btn" onclick="resetQuiz()">
+                <i class="fas fa-redo"></i> إعادة بدء الكويز
+            </button>
+            <button class="nav-btn" onclick="showAllAnswers()">
+                <i class="fas fa-eye"></i> عرض جميع الإجابات
+            </button>
+            <button class="nav-btn" onclick="scrollToTop()">
+                <i class="fas fa-arrow-up"></i> العودة للأعلى
+            </button>
+        </div>
+    </div>
+
+    <!-- التذييل -->
+    <footer>
+        <div class="container footer-content">
+            <p>كويز تفاعلي لكتاب "رحلة بسيطة لفهم الآلة قبل البرمجة" - اختبار فهم المفاهيم الأساسية</p>
+            <p>جميع الحقوق محفوظة © 2026 - هذا الكويز لأغراض تعليمية</p>
+            <div class="social-links">
+                <a href="#" title="تويتر"><i class="fab fa-twitter"></i></a>
+                <a href="#" title="فيسبوك"><i class="fab fa-facebook"></i></a>
+                <a href="#" title="لينكدإن"><i class="fab fa-linkedin"></i></a>
+                <a href="#" title="جيت هاب"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/quiz.js"></script>
+</body>
+
+</html>

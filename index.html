@@ -1,0 +1,143 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- SEO Meta Tags -->
+    <title>رحلة بسيطة لفهم الآلة قبل البرمجة | كتاب تفاعلي</title>
+    <meta name="description"
+        content="كتاب تفاعلي بسيط يشرح كيفية عمل الكمبيوتر من الصفر، من الترانزيستورات إلى البرمجة والذكاء الاصطناعي. تعلم أساسيات الحاسوب بطريقة سهلة وممتعة.">
+    <meta name="keywords"
+        content="تعلم البرمجة, كيف يعمل الكمبيوتر, النظام الثنائي, الترانزيستور, المعالج, الذاكرة, كتاب برمجة عربي">
+    <meta name="author" content="Ayoub Boulakhras">
+    <meta name="language" content="Arabic">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="رحلة بسيطة لفهم الآلة قبل البرمجة">
+    <meta property="og:description" content="كتاب تفاعلي يشرح أساسيات عمل الكمبيوتر بطريقة بسيطة وممتعة">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ar_AR">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="رحلة بسيطة لفهم الآلة قبل البرمجة">
+    <meta name="twitter:description" content="كتاب تفاعلي يشرح أساسيات عمل الكمبيوتر">
+
+    <!-- Apple Mobile Web App -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Preconnect for Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+
+<body>
+    <!-- الترويسة -->
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <i class="fas fa-laptop-code"></i>
+                <span>رحلة بسيطة لفهم الآلة قبل البرمجة</span>
+            </div>
+            <div class="controls">
+                <a href="quiz.html" class="quiz-btn" title="اختبر معلوماتك">
+                    <i class="fas fa-clipboard-check"></i> <span>الاختبار</span>
+                </a>
+                <div class="font-controls">
+                    <button id="decreaseFont" title="تصغير الخط"><i class="fas fa-minus"></i></button>
+                    <button id="increaseFont" title="تكبير الخط"><i class="fas fa-plus"></i></button>
+                </div>
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="fas fa-moon"></i> وضع الليل
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- المحتوى الرئيسي -->
+    <div class="container">
+        <!-- التنقل بين الفصول -->
+        <nav class="chapters-nav">
+            <ul class="chapters-list" id="chaptersList">
+                <!-- سيتم ملؤه بواسطة جافا سكريبت -->
+            </ul>
+        </nav>
+
+        <div class="book-content">
+            <main class="main-content">
+                <div class="page-number" id="pageNumber">مقدمة الكتاب 📘</div>
+                <div class="page-content" id="pageContent">
+                    <!-- سيتم ملؤه بواسطة جافا سكريبت -->
+                </div>
+
+                <!-- أزرار التنقل بين الصفحات -->
+                <div class="navigation-buttons">
+                    <button class="nav-btn" id="prevPage">
+                        <i class="fas fa-arrow-right"></i> الفصل السابق
+                    </button>
+                    <button class="nav-btn" id="nextPage">
+                        الفصل التالي <i class="fas fa-arrow-left"></i>
+                    </button>
+                </div>
+            </main>
+
+            <!-- الشريط الجانبي -->
+            <aside class="sidebar">
+                <div class="progress-container">
+                    <div class="progress-title">
+                        <span>التقدم في القراءة</span>
+                        <span id="progressPercentage">0%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                </div>
+
+                <div class="bookmarks">
+                    <h3><i class="fas fa-bookmark"></i> العلامات المرجعية</h3>
+                    <ul class="bookmark-list" id="bookmarksList">
+                        <!-- سيتم ملؤه بواسطة جافا سكريبت -->
+                    </ul>
+                </div>
+
+                <div class="quick-links">
+                    <h3><i class="fas fa-link"></i> روابط سريعة</h3>
+                    <ul>
+                        <li><a href="#binary"><i class="fas fa-binary"></i> النظام الثنائي</a></li>
+                        <li><a href="#transistor"><i class="fas fa-microchip"></i> الترانزيستورات</a></li>
+                        <li><a href="#processor"><i class="fas fa-brain"></i> المعالج</a></li>
+                        <li><a href="#memory"><i class="fas fa-memory"></i> الذاكرة</a></li>
+                        <li><a href="#program"><i class="fas fa-code"></i> البرنامج</a></li>
+                        <li><a href="#ai"><i class="fas fa-robot"></i> الذكاء الاصطناعي</a></li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <!-- التذييل -->
+    <footer>
+        <div class="container footer-content">
+            <p>كتاب "رحلة بسيطة لفهم الآلة قبل البرمجة" - تأليف: أيوب بولخرسة</p>
+            <p>جميع الحقوق محفوظة © 2026 - هذا العرض التفاعلي لأغراض تعليمية</p>
+            <div class="social-links">
+                <a href="#" title="تويتر"><i class="fab fa-twitter"></i></a>
+                <a href="#" title="فيسبوك"><i class="fab fa-facebook"></i></a>
+                <a href="#" title="لينكدإن"><i class="fab fa-linkedin"></i></a>
+                <a href="#" title="جيت هاب"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
